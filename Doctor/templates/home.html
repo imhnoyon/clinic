@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            color: #333;
+        }
+
+        .hero-section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .hero-section h1 {
+            font-size: 4rem;
+            font-weight: bold;
+        }
+
+        .hero-section p {
+            font-size: 1.25rem;
+        }
+
+        .btn-custom {
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            border-radius: 30px;
+        }
+
+        .btn-custom:hover {
+            background-color: #ee5253;
+        }
+
+        .features {
+            padding: 60px 0;
+            background-color: #fefefe;
+        }
+
+        .feature-box {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer {
+            background-color: #222;
+            color: #aaa;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg px-5 mb-4 p-4" style="background-color: #205f15;">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white" href="#"><strong>Hospital_Management_System</strong></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="{% url 'homepages' %}">Home</a>   
+              </li>   
+             <li>
+              <a class="nav-link active text-white" aria-current="page" href="{% url 'add_doctor' %}">Add_Doctor</a>   
+             </li>
+             <li>
+              <a class="nav-link active text-white" aria-current="page" href="{% url 'doctor_list' %}">Doctor_list</a>
+             </li>
+             <li>
+              <a class="nav-link active text-white" aria-current="page" href="{% url 'add_appointment' %}">Make_an_Appointment</a>
+             </li>
+             <li>
+              <a class="nav-link active text-white" aria-current="page" href="{% url 'appointment_list' %}">Appointment_list</a>
+             </li>
+            </ul>
+            
+            
+          </div>
+        </div>
+      </nav> 
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container">
+            <h1>  Hospital_Management_System</h1>
+            <p>Now you can make a doctor's appointment from the comfort of your home.</p>
+            <a href="#features" class="btn btn-custom mt-4">Get Started</a>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 feature-box">
+                    <h4>Dr. Ahmed Zahid Hossain</h4>
+                    <p>Consultant & Coordinator, Dept. of Pediatric Surgery & Emergency, BSH PLC.</p>
+                </div>
+                <div class="col-md-4 feature-box">
+                    <h4>Dr. Sharmin Chowdhury</h4>
+                    <p>Thyroid, Diabetes & Hormone Specialist.</p>
+                </div>
+                <div class="col-md-4 feature-box">
+                    <h4>Prof. Dr. Tapan Kumar Saha</h4>
+                    <p>Consultant ,General & Laparoscopic Surgery Specialist.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+     <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Created by Mahedi Hasan Noyon. All rights reserved.</p>
+        </div>
+    </footer> 
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+
+
+
+

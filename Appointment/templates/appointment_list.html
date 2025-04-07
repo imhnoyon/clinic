@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Appointments</h2>
+<a href="{% url 'add_appointment' %}" class="btn btn-primary mb-2">Add Appointment</a>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Patient Name</th>
+            <th>Age</th>
+            <th>Phone</th>
+            <th>Doctor</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for appointment in appointments %}
+        <tr>
+            <td>{{ appointment.patient_name }}</td>
+            <td>{{ appointment.age }}</td>
+            <td>{{ appointment.phone_number }}</td>
+            <td>{{ appointment.doctor.name }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
